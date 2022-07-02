@@ -1,0 +1,238 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    background-color: #000;
+    color: #b1c6c2;
+    font-size: 22px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    padding: 0 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    min-height: 50px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.header__logo {
+    line-height: 50px;
+    font-size: 40px;
+}
+
+.main {
+    height: calc(100vh - 128px);
+}
+
+audio {
+    display: none;
+}
+
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(9px);
+    z-index: -1;
+}
+
+.audio-container {
+    position: absolute;
+    height: 300pt;
+    width: 250pt;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+}
+
+.audio__box {
+    position: absolute;
+    height: 50%;
+    width: 103%;
+    background: -webkit-linear-gradient(45deg, rgb(40, 40, 40), rgb(133, 133, 133));
+    z-index: 4;
+    bottom: -15%;
+}
+
+.audio-logo {
+    position: absolute;
+    width: 105%;
+    top: -5%;
+    transform: scale(1);
+    transition: 1s;
+    z-index: 3;
+} 
+
+.play-pause {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 15%;
+    z-index: 4;
+    font-size: 53px;
+    left: 9%;
+    transition: .3s;
+}
+
+.play-pause:hover {
+    opacity: .6;
+}
+
+.previous-song, .next-song {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 14%;
+    font-size: 40px;
+    z-index: 4;
+    transition: .3s;
+}
+
+.previous-song {
+    right: 9%;
+    bottom: 21.5%;
+}
+
+.next-song {
+    right: 9%;
+}
+
+.previous-song:hover, .next-song:hover {
+    opacity: .6;
+}
+
+.song-artist {
+    position: absolute;
+    z-index: 4;
+    color: #c1ff06;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    bottom: 21%;
+    left: 28%;
+}
+
+.song-title {
+    position: absolute;
+    z-index: 4;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    bottom: 16%;
+    left: 28%;
+}
+
+.progress-bar {
+    appearance: none;
+    position: absolute;
+    z-index: 4;
+    height: 5px;
+    background: #000;
+    width: 160pt;
+    bottom: 6.5%;
+    border-radius: 30px;
+    left: 17%;
+}
+
+.current-time {
+    position: absolute;
+    height: 20px;
+    width: 50px;
+    bottom: 0.7%;
+    left: 18%;
+    z-index: 4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #fff;
+    align-items: center;
+}
+
+.duration-time {
+    position: absolute;
+    height: 20px;
+    width: 50px;
+    bottom: 8.7%;
+    right: 11%;
+    z-index: 4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    align-items: center;
+    color: #c1ff06;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 7.5px;
+    border-radius: 5px;
+    background: #c1ff06;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+  }
+
+footer {
+    min-height: 55px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    line-height: 50px;   
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #b1c6c2;
+    transition: opacity .2s linear;
+}
+
+.footer__link:hover {
+    opacity: .5;
+}
+
+.footer__div {
+    padding-top: 10px;
+}
+
+.footer__logo {
+    fill: #b1c6c2;
+    max-height: 50px;
+    max-width: 120px;
+}
+
+
